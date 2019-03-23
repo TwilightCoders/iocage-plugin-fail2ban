@@ -1,0 +1,7 @@
+{
+	"servicerestart": "service fail2ban restart",
+	"serviceget": "/usr/local/bin/pluginget",
+	"serviceset": "/usr/local/bin/pluginset",
+	"options": {
+	}
+}
