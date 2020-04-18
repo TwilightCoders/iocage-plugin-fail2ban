@@ -11,8 +11,16 @@ Check out this repository:
 
 `git clone https://github.com/TwilightCoders/iocage-plugin-fail2ban.git`
 
-Install with `iocage` from within the project directory:
+Install with `iocage` from within the project directory.
+
+You can either use NAT (recommended for FreeNAS >= 11.3):
+
+- `iocage fetch -P fail2ban.json vnet=1 nat=1`
+
+Or a specific IP:
+
 - `iocage fetch -P fail2ban.json ip4_addr="[interface]|[ip_address]/[cidr]"`
+
 - e.g. `iocage fetch -P fail2ban.json ip4_addr="em0|192.168.0.111/24"`
 
 ## Configuration
