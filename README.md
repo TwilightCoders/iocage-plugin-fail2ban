@@ -122,7 +122,11 @@ sshd : /mnt/raid1/data/fail2ban/etc/hosts.evil : deny
 ALL : ALL : allow
 ```
 
-Note, if you're on `FreeNAS` you'll want to edit /conf/base/etc/hosts.allow to make changes persistent across reboots. Ensure it works the way you intended by first editing `/etc/hosts.allow` before editing the base config.
+Note, if you're on `FreeNAS` you'll want to edit /conf/base/etc/hosts.allow to make changes persistent across reboots<sup>[[1]]()</sup>. Ensure it works the way you intended by first editing `/etc/hosts.allow` before editing the base config.
+
+<sup>1</sup>Actually, currently there is [a bug](https://jira.ixsystems.com/browse/NAS-105603) in ~~FreeNAS~~ TrueNAS that prevents this from working. You'll need to add a startup script to accomplish this. `ln -fs /conf/base/etc/hosts.allow /etc/hosts.allow`
+
+Finally, restart sshd `service sshd restart`
 
 ## Contributions
 Source for the original distillation of instructions found here came from [onthax](https://www.ixsystems.com/community/threads/freenas-fail2ban-for-ssh-block-using-hosts-allow.61231)
