@@ -1,6 +1,6 @@
 {
-  "name": "Fail2Ban",
-  "release": "11.2-RELEASE",
+  "name": "fail2ban",
+  "release": "11.3-RELEASE",
   "artifact": ".",
   "pkgs": [
     "python36",
