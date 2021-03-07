@@ -11,6 +11,7 @@ pkg install security/py-fail2ban
 sysrc -f /etc/rc.conf fail2ban_enable="YES"
 
 mkdir -p /mnt/log/root
+mkdir -p /usr/local/etc/hosts
 
 # Set bash as shell
 chsh -s /usr/local/bin/bash root
