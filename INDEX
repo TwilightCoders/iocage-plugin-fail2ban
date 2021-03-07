@@ -1,0 +1,12 @@
+{
+        "fail2ban": {
+                "MANIFEST": "fail2ban.json",
+                "name": "fail2ban",
+                "icon": "https://www.fail2ban.org/fail2ban_logo.png",
+                "description": "Fail2ban scans log files and bans IPs that appear malicious",
+                "official": false,
+                "primary_pkg": "security/py-fail2ban",
+                "category": "security",
+                "homepage": "https://www.fail2ban.org"
+        }
+}
