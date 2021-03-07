@@ -128,6 +128,11 @@ Note, if you're on `FreeNAS` you'll want to edit /conf/base/etc/hosts.allow to m
 
 Finally, restart sshd `service sshd restart`
 
+## Maintenance
+The db will grow in size over time. To find duplicates:
+- `SELECT ip, count(*) count FROM bans GROUP BY ip HAVING count > 1;`
+TODO: Exponential increase in bantime? Deduplicate db??
+
 ## Contributions
 Source for the original distillation of instructions found here came from [onthax](https://www.ixsystems.com/community/threads/freenas-fail2ban-for-ssh-block-using-hosts-allow.61231)
 
